@@ -3,7 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 
 function css() {
-  return src('./src/sass/*.scss')
+  return src('./src/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(dest('./dist/assets/'));
 }
@@ -20,7 +20,7 @@ function html() {
 }
 
 function watchFiles() {
-  watch('./src/sass/*.scss', css);
+  watch('./src/sass/**/*.scss', css);
   watch('./src/js/*.js', js);
   watch('./src/*.html', html);
 }

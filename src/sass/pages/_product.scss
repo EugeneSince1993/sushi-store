@@ -1,0 +1,97 @@
+.product {
+  display: flex;
+  justify-content: center;
+
+  .breadcrumbs {
+    display: flex;
+    margin-bottom: 35px;
+
+    &__item {
+      margin-right: 10px;
+
+      &__link {
+        color: $gray-2;
+      }
+    }
+
+    &__separator {
+      color: $gray-2;
+      margin-right: 10px;
+    }
+  }
+
+  .item {
+    display: flex;
+
+    &__image-container {
+      width: 50%;
+      padding: 0 40px;
+      
+      img {
+
+      }
+    }
+
+    &__info {
+      width: 50%;
+      padding-right: 80px;
+    }
+
+    &__title {
+      color: $black-3;
+      font-size: 28px;
+      font-weight: 500;
+      margin-top: 0;
+    }
+
+    &__weight {
+      margin-bottom: 15px;
+    }
+
+    &__description {
+      min-height: 100px;
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .caloricity-table {
+      display: flex;
+      border-top: 1px solid $gray-3;
+      border-bottom: 1px solid $gray-3;
+      margin-bottom: 20px;
+
+      &__td {
+        line-height: 20px;
+        padding: 10px 0;
+
+        &-value, &-measure-unit {
+          display: inline-block;
+        }
+
+        &-delimiter {
+          margin: 0 20px;
+          background-color: $gray-3;
+          width: 1px;
+          height: 66px;
+        }
+      }
+
+      &__proteins, &__fats, &__carbohydrates, &__energy-value {
+
+        .caloricity-table__td-title {
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    &__price-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__price {
+      font-size: 28px;
+      font-weight: 500;
+    }
+  }
+}
